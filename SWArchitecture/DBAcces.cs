@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 namespace SWArchitecture
 {
-    public enum TaskTypes { Refactoring, Modify, Style };
+    public enum TaskType { Refactoring, Modify, Style };
     public class Task
     {
         public int id;
-        public TaskTypes type;
+        public TaskType type;
         public String UpCode;//code for Richtextbox in up
         public String TaskCode; //place for user answer
         public String DownCode;//code for RichTextbox
@@ -39,32 +39,32 @@ namespace SWArchitecture
         private Getter GetterInst= new Getter();
         public Task getCodeModifyTask(int id)
         {
-            return GetterInst.GetTaskById(TaskTypes.Modify, id);
+            return GetterInst.GetTaskById(TaskType.Modify, id);
         }
 
         public Task getCodeRefactorTask(int id)
         {
-            return GetterInst.GetTaskById(TaskTypes.Refactoring, id);
+            return GetterInst.GetTaskById(TaskType.Refactoring, id);
         }
 
         public Task getCodeStyleTask(int id)
         {
-            return GetterInst.GetTaskById(TaskTypes.Style, id);
+            return GetterInst.GetTaskById(TaskType.Style, id);
         }
 
         public void setCodeModifyTask(Task task)
         {
-            LoadInst.LoadTaskByType(TaskTypes.Modify, task);
+            LoadInst.LoadTaskByType(TaskType.Modify, task);
         }
 
         public void setCodeRefactorTask(Task task)
         {
-            LoadInst.LoadTaskByType(TaskTypes.Refactoring, task);
+            LoadInst.LoadTaskByType(TaskType.Refactoring, task);
         }
 
         public void setCodeStyleTask(Task task)
         {
-            LoadInst.LoadTaskByType(TaskTypes.Style, task);
+            LoadInst.LoadTaskByType(TaskType.Style, task);
         }
     }
     public class TaskDbContext : DbContext
@@ -80,7 +80,7 @@ namespace SWArchitecture
         {
 
         }
-        public void LoadTaskByType(TaskTypes typearg, Task t)
+        public void LoadTaskByType(TaskType typearg, Task t)
         {
             using (var ctx = new TaskDbContext())
             {
@@ -97,7 +97,7 @@ namespace SWArchitecture
         {
 
         }
-        public Task GetTaskById(TaskTypes typearg, int id)
+        public Task GetTaskById(TaskType typearg, int id)
         {
             using (var context = new TaskDbContext())
             {

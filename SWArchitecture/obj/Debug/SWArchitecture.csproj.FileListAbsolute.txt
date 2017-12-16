@@ -22,3 +22,30 @@ c:\users\corov\documents\visual studio 2015\Projects\SWArchitecture\SWArchitectu
 c:\users\corov\documents\visual studio 2015\Projects\SWArchitecture\SWArchitecture\obj\Debug\SWArchitecture.csproj.GenerateResource.Cache
 c:\users\corov\documents\visual studio 2015\Projects\SWArchitecture\SWArchitecture\obj\Debug\SWArchitecture.exe
 c:\users\corov\documents\visual studio 2015\Projects\SWArchitecture\SWArchitecture\obj\Debug\SWArchitecture.pdb
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\bin\Debug\SWArchitecture.exe.config
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\bin\Debug\SWArchitecture.exe
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\bin\Debug\SWArchitecture.pdb
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\bin\Debug\EntityFramework.dll
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\bin\Debug\EntityFramework.SqlServer.dll
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\bin\Debug\EntityFramework.xml
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\bin\Debug\EntityFramework.SqlServer.xml
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\UserControls\CreateTaskForm.g.cs
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\MainWindow.g.cs
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\UserControls\Login.g.cs
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\UserControls\Stats.g.cs
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\UserControls\TaskForm.g.cs
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\App.g.cs
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture_MarkupCompile.cache
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture_MarkupCompile.lref
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\UserControls\CreateTaskForm.baml
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\MainWindow.baml
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\UserControls\Login.baml
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\UserControls\Stats.baml
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\UserControls\TaskForm.baml
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.g.resources
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.Properties.Resources.resources
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.csproj.GenerateResource.Cache
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.csproj.CoreCompileInputs.cache
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.exe
+D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.pdb

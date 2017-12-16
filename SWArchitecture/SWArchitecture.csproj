@@ -35,18 +35,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Data.Entity.Repository, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.Data.Entity.Repository.2.0.0.1\lib\net45\System.Data.Entity.Repository.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -67,16 +64,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Stats.xaml.cs">
+    <Compile Include="UserControls\CreateTaskForm.xaml.cs">
+      <DependentUpon>CreateTaskForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\Stats.xaml.cs">
       <DependentUpon>Stats.xaml</DependentUpon>
     </Compile>
     <Compile Include="TaskChecker.cs" />
-    <Compile Include="Login.xaml.cs">
+    <Compile Include="UserControls\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaskForm.xaml.cs">
+    <Compile Include="UserControls\TaskForm.xaml.cs">
       <DependentUpon>TaskForm.xaml</DependentUpon>
     </Compile>
+    <Page Include="UserControls\CreateTaskForm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -90,15 +94,15 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Login.xaml">
+    <Page Include="UserControls\Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Stats.xaml">
+    <Page Include="UserControls\Stats.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TaskForm.xaml">
+    <Page Include="UserControls\TaskForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

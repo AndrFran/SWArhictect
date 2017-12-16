@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SWArchitecture"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="581.579">
-    <Grid Margin="0,0,0,-10" HorizontalAlignment="Left" Width="628">
+        Title="MainWindow" Height="500" Width="570">
+    <Grid Margin="0,0,0,-10" HorizontalAlignment="Left" Width="570">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="116*"/>
-            <ColumnDefinition Width="401*"/>
+            <ColumnDefinition Width="20*"/>
+            <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
-        <local:TaskForm HorizontalAlignment="Left" Margin="18,10,0,0" x:Name="one1" VerticalAlignment="Top"  Visibility="Visible" Height="446" Width="344" Grid.Column="1" RenderTransformOrigin="0.49,0.603" />
+        <local:TaskForm  x:Name="StudentTaskForm" VerticalAlignment="Top"  Visibility="Visible" Height="446" Width="Auto" Grid.Column="1" />
+        <local:CreateTaskForm  x:Name="LecturerTaskForm" VerticalAlignment="Top"  Visibility="Collapsed" Height="446" Width="Auto" Grid.Column="1"/>
+
         <Label x:Name="label" Content="UserName  will be place here" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <StackPanel HorizontalAlignment="Left" Height="331" Margin="15,49,0,0" VerticalAlignment="Top" Width="126">
             <Button x:Name="button1" Content="CodeStyleTasks" Height="84"/>
@@ -20,7 +22,5 @@
             <Button x:Name="button2_Copy1" Content="UserStats" Height="89"/>
 
         </StackPanel>
-
-
     </Grid>
 </Window>
