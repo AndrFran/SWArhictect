@@ -11,6 +11,12 @@ namespace SWArchitecture
     {
         public int id;
         public TaskTypes type;
+        public String UpCode;//code for Richtextbox in up
+        public String TaskCode; //place for user answer
+        public String DownCode;//code for RichTextbox
+        public String Answer;//Pattern to compare
+        public String Description;//what to do with code 
+        public String RuleForTask;//Rules to use to complete task
     }
     interface IBDInterface
     {
@@ -24,8 +30,13 @@ namespace SWArchitecture
     }
     class BDInterface : IBDInterface
     {
-        private Loader LoadInst;
-        private Getter GetterInst;
+        public BDInterface()
+        {
+            LoadInst = new Loader();
+            GetterInst = new Getter();
+    }
+        private Loader LoadInst=new Loader();
+        private Getter GetterInst= new Getter();
         public Task getCodeModifyTask(int id)
         {
             return GetterInst.GetTaskById(TaskTypes.Modify, id);
@@ -65,6 +76,10 @@ namespace SWArchitecture
     }
     public class Loader
     {
+        public Loader()
+        {
+
+        }
         public void LoadTaskByType(TaskTypes typearg, Task t)
         {
             using (var ctx = new TaskDbContext())
@@ -78,6 +93,10 @@ namespace SWArchitecture
     }
     public class Getter
     {
+        public Getter()
+        {
+
+        }
         public Task GetTaskById(TaskTypes typearg, int id)
         {
             using (var context = new TaskDbContext())
