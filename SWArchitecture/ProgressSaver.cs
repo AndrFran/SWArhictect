@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -47,14 +49,27 @@ namespace SWArchitecture
         public class TaskMemento
         {
             private TaskState _state;
-            private String SaveFile;
-            private void Serialize()
+            private String SaveFile= "Memento.dat";
+            private void Serialize(TaskState taskState)
             {
                 //serialize here
+                BinaryFormatter formatter = new BinaryFormatter();
+                // получаем поток, куда будем записывать сериализованный объект
+                using (FileStream fs = new FileStream(SaveFile, FileMode.OpenOrCreate))
+                {
+                    formatter.Serialize(fs, taskState);
+                }
             }
-            private void Deserialize()
+            private TaskState Deserialize()
             {
+                BinaryFormatter formatter = new BinaryFormatter();
                 //deserialize here
+                TaskState newPerson;
+                using (FileStream fs = new FileStream(SaveFile, FileMode.OpenOrCreate))
+                {
+                     newPerson = (TaskState)formatter.Deserialize(fs);
+                }
+                return newPerson;
             }
             public TaskMemento()
             {
@@ -63,15 +78,15 @@ namespace SWArchitecture
             public void TaskMementoSaveState(TaskState state)
             {
                 _state = state;
-                Serialize();
+                Serialize(state);
             }
             public TaskState GetState()
             {
-                Deserialize();
+                _state=Deserialize();
                 return _state;
             }
         }
-
+        [Serializable]
         public class TaskState
         {
             public TaskState()
