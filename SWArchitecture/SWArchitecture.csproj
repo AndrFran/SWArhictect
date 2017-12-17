@@ -81,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModelVL.edmx</DependentUpon>
     </Compile>
+    <Compile Include="ProgressSaver.cs" />
     <Compile Include="Specialization.cs">
       <DependentUpon>ModelVL.tt</DependentUpon>
     </Compile>

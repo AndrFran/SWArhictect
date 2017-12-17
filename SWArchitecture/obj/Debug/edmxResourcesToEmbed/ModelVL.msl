@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VLPIModelStoreContainer" CdmEntityContainer="VLPIEntities2">
+    <EntitySetMapping Name="Specializations">
+      <EntityTypeMapping TypeName="VLPIModel.Specialization">
+        <MappingFragment StoreEntitySet="Specialization">
+          <ScalarProperty Name="specialization_id" ColumnName="specialization_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="institute" ColumnName="institute" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Statistics">
+      <EntityTypeMapping TypeName="VLPIModel.Statistic">
+        <MappingFragment StoreEntitySet="Statistic">
+          <ScalarProperty Name="statistic_id" ColumnName="statistic_id" />
+          <ScalarProperty Name="mark" ColumnName="mark" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="task_id" ColumnName="task_id" />
+          <ScalarProperty Name="date_of" ColumnName="date_of" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StudyGroups">
+      <EntityTypeMapping TypeName="VLPIModel.StudyGroup">
+        <MappingFragment StoreEntitySet="StudyGroup">
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="course" ColumnName="course" />
+          <ScalarProperty Name="specialization_id" ColumnName="specialization_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SystemUsers">
+      <EntityTypeMapping TypeName="VLPIModel.SystemUser">
+        <MappingFragment StoreEntitySet="SystemUser">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_type_id" ColumnName="user_type_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="birthday" ColumnName="birthday" />
+          <ScalarProperty Name="group_id" ColumnName="group_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Task1">
+      <EntityTypeMapping TypeName="VLPIModel.Task1">
+        <MappingFragment StoreEntitySet="Task1">
+          <ScalarProperty Name="task_id" ColumnName="task_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="upcode" ColumnName="upcode" />
+          <ScalarProperty Name="taskcode" ColumnName="taskcode" />
+          <ScalarProperty Name="answer" ColumnName="answer" />
+          <ScalarProperty Name="descriptio" ColumnName="descriptio" />
+          <ScalarProperty Name="relefortask" ColumnName="relefortask" />
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="downcode" ColumnName="downcode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TaskLanguages">
+      <EntityTypeMapping TypeName="VLPIModel.TaskLanguage">
+        <MappingFragment StoreEntitySet="TaskLanguage">
+          <ScalarProperty Name="language_id" ColumnName="language_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

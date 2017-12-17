@@ -49,3 +49,31 @@ D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitect
 D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.csproj.CoreCompileInputs.cache
 D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.exe
 D:\Disk\Универ\4K1C\Архітектура ПЗ\Project\origin\SWArchitecture\obj\Debug\SWArchitecture.pdb
+D:\gg\SWArchitecture\bin\Debug\SWArchitecture.exe.config
+D:\gg\SWArchitecture\bin\Debug\SWArchitecture.exe
+D:\gg\SWArchitecture\bin\Debug\SWArchitecture.pdb
+D:\gg\SWArchitecture\bin\Debug\EntityFramework.dll
+D:\gg\SWArchitecture\bin\Debug\EntityFramework.SqlServer.dll
+D:\gg\SWArchitecture\bin\Debug\EntityFramework.xml
+D:\gg\SWArchitecture\bin\Debug\EntityFramework.SqlServer.xml
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture.csprojResolveAssemblyReference.cache
+D:\gg\SWArchitecture\obj\Debug\UserControls\CreateTaskForm.g.cs
+D:\gg\SWArchitecture\obj\Debug\MainWindow.g.cs
+D:\gg\SWArchitecture\obj\Debug\UserControls\Login.g.cs
+D:\gg\SWArchitecture\obj\Debug\UserControls\Stats.g.cs
+D:\gg\SWArchitecture\obj\Debug\UserControls\TaskForm.g.cs
+D:\gg\SWArchitecture\obj\Debug\App.g.cs
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture_Content.g.cs
+D:\gg\SWArchitecture\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture_MarkupCompile.cache
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture_MarkupCompile.lref
+D:\gg\SWArchitecture\obj\Debug\UserControls\CreateTaskForm.baml
+D:\gg\SWArchitecture\obj\Debug\MainWindow.baml
+D:\gg\SWArchitecture\obj\Debug\UserControls\Login.baml
+D:\gg\SWArchitecture\obj\Debug\UserControls\Stats.baml
+D:\gg\SWArchitecture\obj\Debug\UserControls\TaskForm.baml
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture.g.resources
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture.Properties.Resources.resources
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture.csproj.GenerateResource.Cache
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture.exe
+D:\gg\SWArchitecture\obj\Debug\SWArchitecture.pdb

@@ -10,66 +10,88 @@ namespace SWArchitecture
     {
         public class Caretaker
         {
-            private readonly ProgressSaver _game = new ProgressSaver();
-            private readonly Stack<GameMemento> _quickSaves = new Stack<GameMemento>();
+            TaskMemento Info;
+
             public void BeginTest()
             {
-                _game.Go();
+                Info = new TaskMemento();
             }
-            public void F5()
-            {
-                _quickSaves.Push(_game.GameSave());
+            public void SaveProgress(TaskState Inf)
+            {//save progress here
+                Info.TaskMementoSaveState(Inf);
             }
-            public void F9()
+            public TaskState LoadProgress()
             {
-                _game.LoadGame(_quickSaves.Peek());
+                //load here
+                return Info.GetState();
             }
         }
-        public class ProgressSaver
+        public class ProgressSaver//we don`t need this but this is in lab so it is dead code
         {
             // Стан містить здоров’я та к-ть вбитих монстрів
-            private GameState _state;
+            private TaskState _state;
             public void Go()
             {
                 //Тут процес повинен міститися тестування 
             }
-            public GameMemento GameSave()
+            public TaskMemento TaskSave()
             {
-                return new GameMemento(_state);
+                return new TaskMemento();
             }
-            public void LoadGame(GameMemento memento)
+            public void LoadTask(TaskMemento memento)
             {
                 _state = memento.GetState();
             }
         }
 
-        public class GameMemento
+        public class TaskMemento
         {
-            private readonly GameState _state;
-            public GameMemento(GameState state)
+            private TaskState _state;
+            private String SaveFile;
+            private void Serialize()
+            {
+                //serialize here
+            }
+            private void Deserialize()
+            {
+                //deserialize here
+            }
+            public TaskMemento()
+            {
+                _state = new TaskState();
+            }
+            public void TaskMementoSaveState(TaskState state)
             {
                 _state = state;
+                Serialize();
             }
-            public GameState GetState()
+            public TaskState GetState()
             {
+                Deserialize();
                 return _state;
             }
         }
 
-        public class GameState
+        public class TaskState
         {
+            public TaskState()
+            {
+
+            }
+            private List<Task> currentTestSet;
             private int CountOfPossitiveAnswers { get; }
             private int CountOfNegativeAnswers { get; }
             private int NumberOfCurrentTask { get; }
             private int CurrentTimeLeft { get; }
             private string CurrentAnswer { get; }
-            public GameState(int pos, int neg, int num, int tl, string ans)
+            public TaskState(int pos, int neg, int num, int tl, string ans, List<Task> tasks)
             {
                 CountOfPossitiveAnswers = pos;
                 CountOfNegativeAnswers = neg;
                 NumberOfCurrentTask = num;
                 CurrentTimeLeft = tl;
                 CurrentAnswer = ans;
+                currentTestSet = tasks;
             }
         }
     }
