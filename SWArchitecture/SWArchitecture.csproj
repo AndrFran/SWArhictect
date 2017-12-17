@@ -45,6 +45,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -64,6 +66,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ModelVL.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelVL.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelVL.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelVL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModelVL.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelVL.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Specialization.cs">
+      <DependentUpon>ModelVL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Statistic.cs">
+      <DependentUpon>ModelVL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudyGroup.cs">
+      <DependentUpon>ModelVL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SystemUser.cs">
+      <DependentUpon>ModelVL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Task1.cs">
+      <DependentUpon>ModelVL.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskLanguage.cs">
+      <DependentUpon>ModelVL.tt</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\CreateTaskForm.xaml.cs">
       <DependentUpon>CreateTaskForm.xaml</DependentUpon>
     </Compile>
@@ -125,6 +160,13 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EntityDeploy Include="ModelVL.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ModelVL.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ModelVL.edmx.diagram">
+      <DependentUpon>ModelVL.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -133,7 +175,24 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ModelVL.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelVL.edmx</DependentUpon>
+      <LastGenOutput>ModelVL.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ModelVL.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelVL.edmx</DependentUpon>
+      <LastGenOutput>ModelVL.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

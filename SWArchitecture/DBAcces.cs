@@ -11,6 +11,7 @@ namespace SWArchitecture
     {
         public int id;
         public TaskType type;
+        public int LanguageId { get; set; }
         public String UpCode;//code for Richtextbox in up
         public String TaskCode; //place for user answer
         public String DownCode;//code for RichTextbox
@@ -34,9 +35,9 @@ namespace SWArchitecture
         {
             LoadInst = new Loader();
             GetterInst = new Getter();
-    }
-        private Loader LoadInst=new Loader();
-        private Getter GetterInst= new Getter();
+        }
+        private Loader LoadInst = new Loader();
+        private Getter GetterInst = new Getter();
         public Task getCodeModifyTask(int id)
         {
             return GetterInst.GetTaskById(TaskType.Modify, id);
@@ -80,19 +81,31 @@ namespace SWArchitecture
         {
 
         }
+        VLPIEntities2 entities = new VLPIEntities2();
         public void LoadTaskByType(TaskType typearg, Task t)
         {
-            using (var ctx = new TaskDbContext())
-            {
-                Task tmp = t;
-                tmp.type = typearg;
-                ctx.Tasks.Add(tmp);
-                ctx.SaveChanges();
-            }
+
+            //using (var ctx = new TaskDbContext())
+            //{
+            //    Task tmp = t;
+            //    tmp.type = typearg;
+            //    ctx.Tasks.Add(tmp);
+            //    ctx.SaveChanges();
+            //}
+            entities.Task1.Add(new Task1 {
+                answer =t.Answer,
+                descriptio =t.Description,
+                downcode =t.DownCode,
+                relefortask =typearg.ToString(),
+                taskcode =t.TaskCode,
+                upcode =t.UpCode,
+                language_id=t.LanguageId
+            });
         }
     }
     public class Getter
     {
+        VLPIEntities2 entities = new VLPIEntities2();
         public Getter()
         {
 
@@ -102,13 +115,27 @@ namespace SWArchitecture
             using (var context = new TaskDbContext())
             {
                 // Query for all blogs with names starting with B 
-                var tasks = from b in context.Tasks
-                            where b.id == id
-                            select b;
-                return tasks.ElementAt(0);
+                //var tasks = from b in context.Tasks
+                //            where b.id == id
+                //            select b;
+                //return tasks.ElementAt(0);
+
+                Task1 t = entities.Task1.Where(x => ((x.task_id == id) && (x.relefortask == typearg.ToString()))).FirstOrDefault();
+                return new Task
+                {
+                    id = t.task_id,
+                    Answer = t.answer,
+                    Description = t.descriptio,
+                    DownCode = t.downcode,
+                    RuleForTask = t.relefortask,
+                    UpCode = t.upcode,
+                    TaskCode = t.taskcode,
+                    type = typearg,
+                    LanguageId=t.language_id.GetValueOrDefault(),
+                };
             }
 
         }
     }
 
-    }
+}
