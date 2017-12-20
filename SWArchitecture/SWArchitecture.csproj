@@ -66,40 +66,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ModelVL.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelVL.Context.tt</DependentUpon>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201712201211508_Initial.cs" />
+    <Compile Include="Migrations\201712201211508_Initial.Designer.cs">
+      <DependentUpon>201712201211508_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="ModelVL.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelVL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ModelVL.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelVL.edmx</DependentUpon>
-    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Specialization.cs" />
+    <Compile Include="Models\Statistic.cs" />
+    <Compile Include="Models\StudyGroup.cs" />
+    <Compile Include="Models\SystemUser.cs" />
+    <Compile Include="Models\Task.cs" />
+    <Compile Include="Models\TaskLanguage.cs" />
     <Compile Include="ProgressSaver.cs" />
-    <Compile Include="Specialization.cs">
-      <DependentUpon>ModelVL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Statistic.cs">
-      <DependentUpon>ModelVL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="StudyGroup.cs">
-      <DependentUpon>ModelVL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="SystemUser.cs">
-      <DependentUpon>ModelVL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Task1.cs">
-      <DependentUpon>ModelVL.tt</DependentUpon>
-    </Compile>
-    <Compile Include="TaskLanguage.cs">
-      <DependentUpon>ModelVL.tt</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\CreateTaskForm.xaml.cs">
       <DependentUpon>CreateTaskForm.xaml</DependentUpon>
     </Compile>
@@ -157,17 +137,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\201712201211508_Initial.resx">
+      <DependentUpon>201712201211508_Initial.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="ModelVL.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelVL.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ModelVL.edmx.diagram">
-      <DependentUpon>ModelVL.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -181,20 +157,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModelVL.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelVL.edmx</DependentUpon>
-      <LastGenOutput>ModelVL.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="ModelVL.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelVL.edmx</DependentUpon>
-      <LastGenOutput>ModelVL.cs</LastGenOutput>
-    </Content>
-  </ItemGroup>
-  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

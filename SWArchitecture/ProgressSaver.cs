@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
+using SWArchitecture.Models;
 
 namespace SWArchitecture
 {
@@ -12,20 +10,20 @@ namespace SWArchitecture
     {
         public class Caretaker
         {
-            TaskMemento Info;
+            TaskMemento _info;
 
             public void BeginTest()
             {
-                Info = new TaskMemento();
+                _info = new TaskMemento();
             }
-            public void SaveProgress(TaskState Inf)
+            public void SaveProgress(TaskState inf)
             {//save progress here
-                Info.TaskMementoSaveState(Inf);
+                _info.TaskMementoSaveState(inf);
             }
             public TaskState LoadProgress()
             {
                 //load here
-                return Info.GetState();
+                return _info.GetState();
             }
         }
         public class ProgressSaver//we don`t need this but this is in lab so it is dead code
@@ -49,13 +47,13 @@ namespace SWArchitecture
         public class TaskMemento
         {
             private TaskState _state;
-            private String SaveFile= "Memento.dat";
+            private String _saveFile= "Memento.dat";
             private void Serialize(TaskState taskState)
             {
                 //serialize here
                 BinaryFormatter formatter = new BinaryFormatter();
                 // получаем поток, куда будем записывать сериализованный объект
-                using (FileStream fs = new FileStream(SaveFile, FileMode.OpenOrCreate))
+                using (FileStream fs = new FileStream(_saveFile, FileMode.OpenOrCreate))
                 {
                     formatter.Serialize(fs, taskState);
                 }
@@ -65,7 +63,7 @@ namespace SWArchitecture
                 BinaryFormatter formatter = new BinaryFormatter();
                 //deserialize here
                 TaskState newPerson;
-                using (FileStream fs = new FileStream(SaveFile, FileMode.OpenOrCreate))
+                using (FileStream fs = new FileStream(_saveFile, FileMode.OpenOrCreate))
                 {
                      newPerson = (TaskState)formatter.Deserialize(fs);
                 }
@@ -93,7 +91,7 @@ namespace SWArchitecture
             {
 
             }
-            private List<Task> currentTestSet;
+            private List<Task> _currentTestSet;
             private int CountOfPossitiveAnswers { get; }
             private int CountOfNegativeAnswers { get; }
             private int NumberOfCurrentTask { get; }
@@ -106,7 +104,7 @@ namespace SWArchitecture
                 NumberOfCurrentTask = num;
                 CurrentTimeLeft = tl;
                 CurrentAnswer = ans;
-                currentTestSet = tasks;
+                _currentTestSet = tasks;
             }
         }
     }

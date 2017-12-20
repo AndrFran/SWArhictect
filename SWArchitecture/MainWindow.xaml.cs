@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
+using SWArchitecture.Models;
 
 namespace SWArchitecture
 {
@@ -20,9 +8,16 @@ namespace SWArchitecture
     /// </summary>
     public partial class MainWindow : Window
     {
+        public SystemUser User { get; set; } = null;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        public void ShowTaskForm(SystemUser user)
+        {
+            if (user.UserType == UserTypes.Student) StudentTaskForm.Visibility = Visibility.Visible;
+            else TeacherTaskForm.Visibility = Visibility.Visible;
         }
     }
 }

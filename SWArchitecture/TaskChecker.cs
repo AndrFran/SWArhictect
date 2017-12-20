@@ -1,30 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq;
+using SWArchitecture.Models;
 
 namespace SWArchitecture
 {
     public struct Reason
     {
-        public bool result { get; set; }
-        string description; //optional field if we want to retrun description what is wrong
+        public bool Result { get; set; }
+        string _description; //optional field if we want to retrun description what is wrong
     }
     public class TaskChecker
     {
-        public Reason checkTask(Task task)
+        public Reason CheckTask(Task task)
         {
             var userAnswer = task.TaskCode.Split(' ', '\n', '\t').Aggregate((a, b) => a + b);
             var rightAnswer = task.TaskCode.Split(' ', '\n', '\t').Aggregate((a, b) => a + b);
 
             if (userAnswer.Equals(rightAnswer))
-                return new Reason{result=true};
-            else        
-                return new Reason { result = false };
-            // logic to check task here
-            // may be multiple functions for every task type or just one if check is common 
-
+                return new Reason{Result=true};
+            return new Reason { Result = false };
         }
     }
 }

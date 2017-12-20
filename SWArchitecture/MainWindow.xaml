@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SWArchitecture"
+        xmlns:userControls="clr-namespace:SWArchitecture.UserControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="570">
     <Grid Margin="0,0,0,-10" HorizontalAlignment="Left" Width="570">
@@ -11,8 +11,9 @@
             <ColumnDefinition Width="20*"/>
             <ColumnDefinition Width="40*"/>
         </Grid.ColumnDefinitions>
-        <local:TaskForm  x:Name="StudentTaskForm" VerticalAlignment="Top"  Visibility="Visible" Height="446" Width="Auto" Grid.Column="1" />
-        <local:CreateTaskForm  x:Name="LecturerTaskForm" VerticalAlignment="Top"  Visibility="Collapsed" Height="446" Width="Auto" Grid.Column="1"/>
+        <userControls:Login Visibility="Visible" Grid.Column="1"/>
+        <userControls:TaskForm  x:Name="StudentTaskForm" VerticalAlignment="Top"  Visibility="Collapsed" Height="446" Width="Auto" Grid.Column="1" />
+        <userControls:CreateTaskForm  x:Name="TeacherTaskForm" VerticalAlignment="Top"  Visibility="Collapsed" Height="446" Width="Auto" Grid.Column="1"/>
 
         <Label x:Name="label" Content="UserName  will be place here" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
         <StackPanel HorizontalAlignment="Left" Height="331" Margin="15,49,0,0" VerticalAlignment="Top" Width="126">
