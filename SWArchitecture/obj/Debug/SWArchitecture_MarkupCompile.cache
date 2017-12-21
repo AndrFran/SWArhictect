@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\
+C:\Users\djosa\Documents\SWArhictect\SWArchitecture\obj\Debug\
 SWArchitecture
 none
 false
 DEBUG;TRACE
-C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\App.xaml
-5839868317
-2570564755
-21-198118629
-201133678690
-UserControls\CreateTaskForm.xaml;MainWindow.xaml;UserControls\Login.xaml;UserControls\Stats.xaml;UserControls\TaskForm.xaml;
+C:\Users\djosa\Documents\SWArhictect\SWArchitecture\App.xaml
+61823818353
+
+26-1343215251
+22-1840694873
+UserControls\CreateTaskForm.xaml;MainWindow.xaml;UserControls\Login.xaml;UserControls\main.xaml;UserControls\Stats.xaml;UserControls\TaskForm.xaml;
 
 False
 
