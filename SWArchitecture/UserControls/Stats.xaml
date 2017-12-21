@@ -9,7 +9,7 @@
         <DataGrid x:Name="dataGrid" HorizontalAlignment="Left" Margin="0,71,0,0" VerticalAlignment="Top" Height="219" Width="290"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="151,41,0,0" TextWrapping="Wrap" Text="UserName for Search" VerticalAlignment="Top" Height="25" Width="139"/>
         <Label x:Name="label" Content="who are you searching for?" HorizontalAlignment="Left" Margin="106,10,0,0" VerticalAlignment="Top" Width="162"/>
-        <Button x:Name="button" Content="FindStats" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="116"/>
+        <Button x:Name="button" Content="FindStats" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" Width="116" Click="button_Click"/>
 
     </Grid>
 </UserControl>

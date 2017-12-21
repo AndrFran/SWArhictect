@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using MahApps.Metro.Controls;
 using SWArchitecture.Models;
+using System.Windows.Controls;
 
 namespace SWArchitecture
 {
@@ -21,9 +22,17 @@ namespace SWArchitecture
             {
                 StudentTaskForm.Visibility = Visibility.Visible;
                 StudentTaskForm.User = user;
+                loginctrl.Visibility = Visibility.Collapsed;
+
             }
             else
                 TeacherTaskForm.Visibility = Visibility.Visible;
+            loginctrl.Visibility = Visibility.Collapsed;
+        }
+
+        private void Login_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

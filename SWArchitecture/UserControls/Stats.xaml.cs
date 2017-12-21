@@ -11,5 +11,10 @@ namespace SWArchitecture.UserControls
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
     }
 }

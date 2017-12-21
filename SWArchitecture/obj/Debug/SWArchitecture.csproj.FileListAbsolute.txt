@@ -91,7 +91,6 @@ C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\UserControl
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\UserControls\Stats.g.cs
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\UserControls\TaskForm.g.cs
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\App.g.cs
-C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitecture_Content.g.cs
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitecture_MarkupCompile.cache
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitecture_MarkupCompile.lref
@@ -106,3 +105,12 @@ C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitect
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitecture.csproj.CoreCompileInputs.cache
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitecture.exe
 C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitecture.pdb
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\bin\Debug\MahApps.Metro.dll
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\bin\Debug\MahApps.Metro.pdb
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\bin\Debug\MahApps.Metro.xml
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\App.baml
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitecture.Migrations.Initial.resources
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\SWArchitecture.Migrations.Updatedmarkinstatistic.resources
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\UserControls\StatsWindow.g.cs
+C:\Users\Romeo\Documents\GitHub\SWArhictect\SWArchitecture\obj\Debug\UserControls\StatsWindow.baml

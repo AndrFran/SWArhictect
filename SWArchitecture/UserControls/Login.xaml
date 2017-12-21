@@ -6,11 +6,11 @@
              xmlns:local="clr-namespace:SWArchitecture.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
-    <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
+    <StackPanel Name="Loginpanel" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
         <Label x:Name="labelLogin" Content="Login" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="120"/>
         <TextBox x:Name="textBoxLogin"  Height="23" Margin="10" TextWrapping="Wrap"  Width="150"/>
         <Label x:Name="labelPass" Content="Password" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="textBoxPass" Height="23" Margin="10" TextWrapping="Wrap"   Width="150"/>
+        <PasswordBox x:Name="textBoxPass"   Height="23" Margin="10"    Width="150"/>
         <StackPanel Orientation="Horizontal">
             <Button x:Name="buttonRegister" Visibility="Collapsed" Content="Register" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="75" Click="buttonRegister_Click"/>
             <Button x:Name="buttonLogin" Content="Login" HorizontalAlignment="Left" Margin="10" VerticalAlignment="Top" Width="75" Click="buttonLogin_Click"/>

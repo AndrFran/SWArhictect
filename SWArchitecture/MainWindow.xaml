@@ -9,11 +9,11 @@
         Title="MainWindow" Height="500" Width="570">
     <Grid Margin="0,0,0,-10" HorizontalAlignment="Left" Width="570">
         
-        <userControls:Login Visibility="Visible"/>
+        <userControls:Login x:Name="loginctrl" Visibility="Visible"/>
         <userControls:TaskForm  x:Name="StudentTaskForm" VerticalAlignment="Top"  Visibility="Collapsed" Height="446" Width="Auto"  />
         <userControls:CreateTaskForm  x:Name="TeacherTaskForm" VerticalAlignment="Top"  Visibility="Collapsed" Height="446" Width="Auto" />
 
-        <Label x:Name="label" Content="UserName  will be place here" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label123" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
        
     </Grid>
 </controls:MetroWindow>

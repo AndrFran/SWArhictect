@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
 using SWArchitecture.Models;
+using System.Windows;
 
 namespace SWArchitecture.UserControls
 {
@@ -86,6 +87,17 @@ namespace SWArchitecture.UserControls
             current = -1;
             CurrentTasks = Tasks.Where(t => t.Type == TaskType.WriteCode).ToList();
             ShowNext();
+        }
+
+        private void buttonStats_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+            var entities = new ApplicationDbContext();
+            //var list=entities.SystemUsers.FirstOrDefault(x => x.Id == User.Id).Statistics;
+            var list = entities.Statistics.Where(x => x.User.Id == User.Id);
+            var windstats = new StatsWindow();
+            windstats.Data.ItemsSource = list.ToList();
+            windstats.Show();
         }
     }
 }

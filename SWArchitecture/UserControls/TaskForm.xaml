@@ -13,7 +13,7 @@
             <Button x:Name="buttonCodeStyleTask"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Code Style Tasks" Height="70" Click="buttonCodeStyleTask_Click"/>
             <Button x:Name="buttonRefactorTask"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Code Refactoring Task" Height="70" Click="buttonRefactorTask_Click"/>
             <Button x:Name="buttonCodeWrite"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Code Write Task" Height="70" Click="buttonCodeWrite_Click"/>
-            <Button x:Name="buttonStats"  Style="{StaticResource AccentedSquareButtonStyle}" Content="User Stats" Height="70"/>
+            <Button x:Name="buttonStats"  Style="{StaticResource AccentedSquareButtonStyle}" Content="User Stats" Height="70" Click="buttonStats_Click"/>
         </StackPanel>
         <StackPanel  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="350">
             <TextBlock x:Name="TextBlockDescription" HorizontalAlignment="Left" Margin="32,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Height="41"><Span Foreground="Blue" FontSize="12.6666666666667" FontFamily="Consolas"><Run Text="Diplay what is task here and task rules(code style rules)"/></Span></TextBlock>
