@@ -1,0 +1,105 @@
+﻿<Page x:Class="SWArchitecture.UserControls.main"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SWArchitecture.UserControls"
+      mc:Ignorable="d"
+      Title="main" Height="710.7" Width="880.8">
+    <Grid Background="gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="128"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0">
+            <Grid Background="gray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0"
+                            VerticalAlignment="Center">
+                    <Grid Background="gray">
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Source="Content/french-1.png"
+                               Grid.Row="0"></Image>
+                        <TextBlock Grid.Row="1"
+                                   FontSize="14"
+                                   TextWrapping="WrapWithOverflow"
+                                   Width="70">Лоран БАЛЬЗАК</TextBlock>
+                        <TextBlock Grid.Row="2"
+                                   FontSize="9"
+                                   TextWrapping="WrapWithOverflow"
+                                   Width="70">laurent1995</TextBlock>
+                    </Grid>
+                </StackPanel>
+                <Button  Grid.Row="1"
+                         Width="64"
+                         Height="64"
+                         Name="Home"
+                         Background="gray"
+                         Click="ShowFrame">
+                    <Image  Source="Content/house.png" />
+                </Button>
+                <Button  Grid.Row="2"
+                         Width="64"
+                         Height="64"
+                         Background="gray"
+                         Name="Theoria"
+                         Click="ShowFrame">
+                    <Image Source="Content/studying.png" />
+                </Button>
+                <Button  Grid.Row="3"
+                         Width="64"
+                         Height="64"
+                         Background="gray"
+                         Name="Testing"
+                         Click="ShowFrame">
+                    <Image Source="Content/writing.png" />
+                </Button>
+                <Button  Grid.Row="4"
+                         Width="64"
+                         Height="64"
+                         Background="gray"
+                         Name="Constructor"
+                         Click="ShowFrame">
+                    <Image Source="Content/ereader-1.png" />
+                </Button>
+                <Button  Grid.Row="5"
+                         Width="64"
+                         Height="64"
+                         Background="gray"
+                         Name="Reporting"
+                         Click="ShowFrame">
+                    <Image Source="Content/printer.png" />
+                </Button>
+                <Label x:Name="label" Content="Початкова сторінка" HorizontalAlignment="Left" Margin="4,81,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                <Label x:Name="label_Copy" Content="Початкова сторінка" HorizontalAlignment="Left" Margin="3,84.6,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.RowSpan="2"/>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1">
+            <Grid Background="gray">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock VerticalAlignment="Center"
+                           FontSize="20"
+                           Name="Header"
+                           TextAlignment="Center">Header</TextBlock>
+                <Frame Name="Content" 
+                      Background="White"
+                      Grid.Row="1"
+                      Margin="10,10,10,10"></Frame>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
