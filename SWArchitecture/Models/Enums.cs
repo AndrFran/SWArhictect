@@ -6,6 +6,6 @@
         Student=1
     }
 
-    public enum TaskType { Refactoring, Modify, Style }
+    public enum TaskType { WriteCode, Refactor, CodeStyle }
 
 }

@@ -8,7 +8,7 @@ namespace SWArchitecture.Models
         public int Id { get; set; }
         public TaskType Type { get; set; }
         public string Name { get; set; }
-        public string Upcode { get; set; }
+        public string UpCode { get; set; }
         public string TaskCode { get; set; }
         public string DownCode { get; set; }
         public string Answer { get; set; }

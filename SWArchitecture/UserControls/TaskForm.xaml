@@ -3,34 +3,22 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             mc:Ignorable="d" Height="430" Width="345">
+             mc:Ignorable="d" Height="415" Width="345">
     <Grid Margin="0,10,0,28" HorizontalAlignment="Left" Width="338">
         <StackPanel HorizontalAlignment="Left" Margin="12,89,0,50" Width="316">
             <Border BorderBrush="Black" BorderThickness="2">
-                <RichTextBox x:Name="richTextBox" Height="100" Margin="2,0,-2,0" >
-                    <FlowDocument>
-                        <Paragraph>
-                            <Run Text="RichTextBox"/>
-                        </Paragraph>
-                    </FlowDocument>
-                </RichTextBox>
+                <TextBox x:Name="TextBoxTaskUp" Height="100" />
             </Border>
             <Border BorderBrush="Black" BorderThickness="2">
-                <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TextBlock"/>
+                <TextBox x:Name="TextBoxTaskAnswer" TextWrapping="Wrap" Text="Write your code here!" Height="36"/>
             </Border>
             <Border BorderBrush="Black" BorderThickness="2">
-                <RichTextBox x:Name="richTextBox_Copy" Height="116">
-                    <FlowDocument>
-                        <Paragraph>
-                            <Run Text="RichTextBox"/>
-                        </Paragraph>
-                    </FlowDocument>
-                </RichTextBox>
+                <TextBox x:Name="TextBoxTaskDown" Height="116"/>
             </Border>
         </StackPanel>
-        <Button x:Name="button" Content="Prev" HorizontalAlignment="Left" Margin="12,345,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.066,-0.089"/>
-        <Button x:Name="button_Copy" Content="Check" HorizontalAlignment="Left" Margin="117,345,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.066,-0.089"/>
-        <Button x:Name="button_Copy1" Content="Next" HorizontalAlignment="Left" Margin="253,345,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.066,-0.089"/>
-        <TextBlock x:Name="Rules" HorizontalAlignment="Left" Margin="32,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Height="41"><Span Foreground="Blue" FontSize="12.6666666666667" FontFamily="Consolas"><Run Text="Diplay what is task here and task rules(code style ryles)"/></Span></TextBlock>
+        <Button x:Name="buttonPrevTask" Content="Prev" HorizontalAlignment="Left" Margin="12,345,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="buttonCheckTask" Content="Check" HorizontalAlignment="Left" Margin="130,345,0,0" VerticalAlignment="Top" Width="76" Click="buttonCheckTask_Click"/>
+        <Button x:Name="buttonNextTask" Content="Next" HorizontalAlignment="Left" Margin="253,345,0,0" VerticalAlignment="Top" Width="75" Click="buttonNextTask_Click"/>
+        <TextBlock x:Name="TextBlockDescription" HorizontalAlignment="Left" Margin="32,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Height="41"><Span Foreground="Blue" FontSize="12.6666666666667" FontFamily="Consolas"><Run Text="Diplay what is task here and task rules(code style rules)"/></Span></TextBlock>
     </Grid>
 </UserControl>

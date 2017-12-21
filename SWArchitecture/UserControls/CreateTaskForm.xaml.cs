@@ -10,7 +10,7 @@ namespace SWArchitecture.UserControls
     /// </summary>
     public partial class CreateTaskForm : UserControl
     {
-        List<string> ListBoxItems = new List<string>{ "Refactor Code", "Write Code", "Code Style" };
+        List<string> ListBoxItems = new List<string>{ TaskType.Refactor.ToString(), TaskType.WriteCode.ToString(), TaskType.CodeStyle.ToString() };
         public CreateTaskForm()
         {
             InitializeComponent();
@@ -27,11 +27,11 @@ namespace SWArchitecture.UserControls
                 var task = new Task()
                 {
                     Description = RichTextBoxTaskDesc.Text,
-                    Upcode = RichTextBoxTaskUp.Text,
+                    UpCode = RichTextBoxTaskUp.Text,
                     Answer = RichTextBoxAnswer.Text,
                     DownCode = RichTextBoxTaskLower.Text,
                     RuleForTask = RichTextBoxTaskRules.Text,
-                    Type = (TaskType) ListBoxItems.IndexOf(ListBoxModuleType.SelectionBoxItemStringFormat)
+                    Type = (TaskType) ListBoxItems.IndexOf( (string)ListBoxModuleType.SelectionBoxItem)
                 };
                 context.Task.Add(task);
                 if (context.SaveChanges() != 0)

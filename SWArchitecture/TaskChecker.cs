@@ -13,7 +13,7 @@ namespace SWArchitecture
         public Reason CheckTask(Task task)
         {
             var userAnswer = task.TaskCode.Split(' ', '\n', '\t').Aggregate((a, b) => a + b);
-            var rightAnswer = task.TaskCode.Split(' ', '\n', '\t').Aggregate((a, b) => a + b);
+            var rightAnswer = task.Answer.Split(' ', '\n', '\t').Aggregate((a, b) => a + b);
 
             if (userAnswer.Equals(rightAnswer))
                 return new Reason{Result=true};
