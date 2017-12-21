@@ -30,7 +30,7 @@ namespace SWArchitecture.UserControls
 
         private async void buttonCheckTask_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            if (CurrentTasks.Count < current)
+            if (CurrentTasks.Count > current)
             {
                 var task = CurrentTasks[current];
                 task.TaskCode = TextBoxTaskAnswer.Text;

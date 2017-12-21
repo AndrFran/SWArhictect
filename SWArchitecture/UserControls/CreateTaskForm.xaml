@@ -10,7 +10,7 @@
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="60"></RowDefinition>
         </Grid.RowDefinitions>
-        <StackPanel HorizontalAlignment="Left" Margin="10,0,10,0" Width="340">
+        <StackPanel HorizontalAlignment="Left" Margin="10,0,10,0" Width="320">
             <TextBox x:Name="RichTextBoxTaskDesc" Height="50" Margin="0,0,0,15" />
             <TextBox x:Name="RichTextBoxTaskRules" Height="50" Margin="0,0,0,15"/>
             <Border BorderBrush="Black" BorderThickness="2">
@@ -20,10 +20,10 @@
                 <TextBox x:Name="RichTextBoxAnswer"/>
             </Border>
             <Border BorderBrush="Black" BorderThickness="2">
-                <TextBox x:Name="RichTextBoxTaskLower" Height="116" Text="Text"/>
+                <TextBox x:Name="RichTextBoxTaskLower" Height="90"/>
             </Border>
         </StackPanel>
-        <StackPanel Grid.Row="1" Orientation="Horizontal"  VerticalAlignment="Center" Margin="20">
+        <StackPanel Grid.Row="1" Orientation="Horizontal"  VerticalAlignment="Center" Margin="15">
             <ComboBox Name="ListBoxModuleType" Width="150" Margin="0,0,80,0"/>
             <Button  Content="Add" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="ButtonAddTask_Click"/>
         </StackPanel>
