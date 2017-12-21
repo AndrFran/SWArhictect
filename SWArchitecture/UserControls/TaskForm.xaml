@@ -3,9 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             mc:Ignorable="d" Height="415" Width="345">
-    <Grid Margin="0,10,0,28" HorizontalAlignment="Left" Width="338">
-        <StackPanel HorizontalAlignment="Left" Margin="12,89,0,50" Width="316">
+             mc:Ignorable="d" Height="415" Width="500">
+    <Grid  HorizontalAlignment="Left" Width="500">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" HorizontalAlignment="Center"  VerticalAlignment="Center" Width="130">
+            <Button x:Name="buttonCodeStyleTask"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Code Style Tasks" Height="70" Click="buttonCodeStyleTask_Click"/>
+            <Button x:Name="buttonRefactorTask"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Code Refactoring Task" Height="70" Click="buttonRefactorTask_Click"/>
+            <Button x:Name="buttonCodeWrite"  Style="{StaticResource AccentedSquareButtonStyle}" Content="Code Write Task" Height="70" Click="buttonCodeWrite_Click"/>
+            <Button x:Name="buttonStats"  Style="{StaticResource AccentedSquareButtonStyle}" Content="User Stats" Height="70"/>
+        </StackPanel>
+        <StackPanel  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Width="350">
+            <TextBlock x:Name="TextBlockDescription" HorizontalAlignment="Left" Margin="32,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Height="41"><Span Foreground="Blue" FontSize="12.6666666666667" FontFamily="Consolas"><Run Text="Diplay what is task here and task rules(code style rules)"/></Span></TextBlock>
             <Border BorderBrush="Black" BorderThickness="2">
                 <TextBox x:Name="TextBoxTaskUp" Height="100" />
             </Border>
@@ -15,10 +26,13 @@
             <Border BorderBrush="Black" BorderThickness="2">
                 <TextBox x:Name="TextBoxTaskDown" Height="116"/>
             </Border>
+            <StackPanel Orientation="Horizontal">
+                <Button x:Name="buttonPrevTask" Content="Prev" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75"/>
+                <Button x:Name="buttonCheckTask" Content="Check" HorizontalAlignment="Left" Margin="50,0,50,0"  VerticalAlignment="Top" Width="76" Click="buttonCheckTask_Click"/>
+                <Button x:Name="buttonNextTask" Content="Next" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="75" Click="buttonNextTask_Click"/>
+            </StackPanel>
         </StackPanel>
-        <Button x:Name="buttonPrevTask" Content="Prev" HorizontalAlignment="Left" Margin="12,345,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="buttonCheckTask" Content="Check" HorizontalAlignment="Left" Margin="130,345,0,0" VerticalAlignment="Top" Width="76" Click="buttonCheckTask_Click"/>
-        <Button x:Name="buttonNextTask" Content="Next" HorizontalAlignment="Left" Margin="253,345,0,0" VerticalAlignment="Top" Width="75" Click="buttonNextTask_Click"/>
-        <TextBlock x:Name="TextBlockDescription" HorizontalAlignment="Left" Margin="32,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="271" Height="41"><Span Foreground="Blue" FontSize="12.6666666666667" FontFamily="Consolas"><Run Text="Diplay what is task here and task rules(code style rules)"/></Span></TextBlock>
+        
+        
     </Grid>
 </UserControl>

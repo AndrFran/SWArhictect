@@ -29,24 +29,25 @@ namespace SWArchitecture.UserControls
 
         private async void buttonCheckTask_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-
-            var task = CurrentTasks[current];
-            task.TaskCode = TextBoxTaskAnswer.Text;
-            var Res = new TaskChecker().CheckTask(task);
-
-            using (var context = new ApplicationDbContext())
+            if (CurrentTasks.Count < current)
             {
-                var statistic = new Statistic()
-                {
-                    Date = DateTime.Now,
-                    Task = task,
-                    Mark = Res.Result ? 1 : 0,
-                    User = User
-                };
-                context.Statistics.Add(statistic);
-                await context.SaveChangesAsync();
-            }
+                var task = CurrentTasks[current];
+                task.TaskCode = TextBoxTaskAnswer.Text;
+                var Res = new TaskChecker().CheckTask(task);
 
+                using (var context = new ApplicationDbContext())
+                {
+                    var statistic = new Statistic()
+                    {
+                        Date = DateTime.Now,
+                        Task = task,
+                        Mark = Res.Result ? 1 : 0,
+                        User = User
+                    };
+                    context.Statistics.Add(statistic);
+                    await context.SaveChangesAsync();
+                }
+            }
         }
 
         private void ShowNext()
@@ -63,6 +64,27 @@ namespace SWArchitecture.UserControls
         private void buttonNextTask_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             buttonCheckTask_Click(sender, e);
+            ShowNext();
+        }
+
+        private void buttonCodeStyleTask_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            current = -1;
+            CurrentTasks = Tasks.Where(t => t.Type == TaskType.CodeStyle).ToList();
+            ShowNext();
+        }
+
+        private void buttonRefactorTask_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            current = -1;
+            CurrentTasks = Tasks.Where(t => t.Type == TaskType.Refactor).ToList();
+            ShowNext();
+        }
+
+        private void buttonCodeWrite_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            current = -1;
+            CurrentTasks = Tasks.Where(t => t.Type == TaskType.WriteCode).ToList();
             ShowNext();
         }
     }
