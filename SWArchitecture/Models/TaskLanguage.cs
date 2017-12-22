@@ -3,6 +3,7 @@ using System.Windows;
 
 namespace SWArchitecture.Models
 {
+    [Serializable]
     public  class TaskLanguage
     {
         public int Id { get; set; }
