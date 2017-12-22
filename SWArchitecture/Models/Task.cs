@@ -3,6 +3,7 @@ using System.Windows.Documents;
 
 namespace SWArchitecture.Models
 {
+    [Serializable]
     public class Task
     {
         public int Id { get; set; }
