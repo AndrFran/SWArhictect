@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -47,7 +47,7 @@ namespace SWArchitecture
         public class TaskMemento
         {
             private TaskState _state;
-            private String _saveFile= "Memento.dat";
+            private String _saveFile = "Memento.dat";
             private void Serialize(TaskState taskState)
             {
                 //serialize here
@@ -65,7 +65,7 @@ namespace SWArchitecture
                 TaskState newPerson;
                 using (FileStream fs = new FileStream(_saveFile, FileMode.OpenOrCreate))
                 {
-                     newPerson = (TaskState)formatter.Deserialize(fs);
+                    newPerson = (TaskState)formatter.Deserialize(fs);
                 }
                 return newPerson;
             }
@@ -80,7 +80,7 @@ namespace SWArchitecture
             }
             public TaskState GetState()
             {
-                _state=Deserialize();
+                _state = Deserialize();
                 return _state;
             }
         }
@@ -91,12 +91,12 @@ namespace SWArchitecture
             {
 
             }
-            private List<Task> _currentTestSet;
-            private int CountOfPossitiveAnswers { get; }
-            private int CountOfNegativeAnswers { get; }
-            private int NumberOfCurrentTask { get; }
-            private int CurrentTimeLeft { get; }
-            private string CurrentAnswer { get; }
+            public List<Task> _currentTestSet;
+            public int CountOfPossitiveAnswers { get; }
+            public int CountOfNegativeAnswers { get; }
+            public int NumberOfCurrentTask { get; }
+            public int CurrentTimeLeft { get; }
+            public string CurrentAnswer { get; }
             public TaskState(int pos, int neg, int num, int tl, string ans, List<Task> tasks)
             {
                 CountOfPossitiveAnswers = pos;
