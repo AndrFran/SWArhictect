@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Windows;
-
+using System;
 namespace SWArchitecture.Models
 {
     [Serializable]
