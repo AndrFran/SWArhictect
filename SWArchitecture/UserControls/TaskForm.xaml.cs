@@ -12,10 +12,10 @@ namespace SWArchitecture.UserControls
         private static Singleton instance;
 
         private Singleton() { }
-        public int cur=-1;
-        public int count=0;
-        public int corans=0;
-        public TaskType type=TaskType.Refactor;
+        public int cur = -1;
+        public int count = 0;
+        public int corans = 0;
+        public TaskType type = TaskType.Refactor;
         public static Singleton Instance
         {
             get
@@ -40,8 +40,9 @@ namespace SWArchitecture.UserControls
 
         public void Save()
         {
-            SaverLoader.SaveProgress(new TaskState(Singleton.Instance.corans,0,
-                Singleton.Instance.cur,0, TextBoxTaskAnswer.Text, CurrentTasks) { } );
+            SaverLoader.SaveProgress(new TaskState(Singleton.Instance.corans, 0,
+                Singleton.Instance.cur, 0, TextBoxTaskAnswer.Text, CurrentTasks)
+            { });
         }
         public TaskForm()
         {
@@ -60,7 +61,7 @@ namespace SWArchitecture.UserControls
                 this.TextBoxTaskAnswer.Text = tmp.CurrentAnswer;
                 CurrentTasks = tmp._currentTestSet;
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 CurrentTasks = Tasks.Where(t => t.Type == TaskType.Refactor).ToList();
             }
@@ -77,7 +78,7 @@ namespace SWArchitecture.UserControls
                 var task = CurrentTasks[++Singleton.Instance.cur];
                 task.TaskCode = TextBoxTaskAnswer.Text;
                 var Res = new TaskChecker().CheckTask(task);
-                if(Res.Result)
+                if (Res.Result)
                 {
                     Singleton.Instance.corans++;
                     this.CorrectAns.Content = Singleton.Instance.corans.ToString();
@@ -99,7 +100,7 @@ namespace SWArchitecture.UserControls
 
         private void ShowNext()
         {
-            this.CurTask.Content = (Singleton.Instance.cur+1).ToString();
+            this.CurTask.Content = (Singleton.Instance.cur + 1).ToString();
             if (CurrentTasks.Count > 0)
             {
                 var task = CurrentTasks[++Singleton.Instance.cur];
@@ -139,6 +140,16 @@ namespace SWArchitecture.UserControls
         private void buttonStats_Copy_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Save();
+        }
+
+        private void buttonStats_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            var entities = new ApplicationDbContext();
+            //var list=entities.SystemUsers.FirstOrDefault(x => x.Id == User.Id).Statistics;
+            var list = entities.Statistics.Where(x => x.User.Id == User.Id);
+            var windstats = new StatsWindow();
+            windstats.Data.ItemsSource = list.ToList();
+            windstats.Show();
         }
     }
 }
