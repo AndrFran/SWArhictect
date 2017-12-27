@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Windows.Documents;
-using System;
+
 namespace SWArchitecture.Models
 {
-    [Serializable]
     public class Task
     {
         public int Id { get; set; }

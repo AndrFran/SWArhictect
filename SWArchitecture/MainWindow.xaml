@@ -5,16 +5,108 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:userControls="clr-namespace:SWArchitecture.UserControls"
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:swArchitecture="clr-namespace:SWArchitecture"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="570">
-    <Grid Margin="0,0,0,-10" HorizontalAlignment="Left" Width="570">
-        
-        <userControls:Login x:Name="loginctrl" Visibility="Visible"/>
-        <userControls:TaskForm  x:Name="StudentTaskForm" VerticalAlignment="Top"  Visibility="Collapsed" Height="446" Width="Auto"  />
-        <userControls:CreateTaskForm  x:Name="TeacherTaskForm" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" Height="446" Width="Auto" />
-
-        <Label x:Name="label123" Content="" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
-       
+        Title="MainWindow" x:Name="MainWindowForm" Height="728" Width="827.6">
+    <Grid Background="LightSkyBlue" Name="MainGrid" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="128"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0">
+            <Grid Background="LightSkyBlue">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0"
+                            VerticalAlignment="Center">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                            <RowDefinition></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Name="UserImage" Source="Images/student.png"
+                               Grid.Row="0"></Image>
+                        <TextBlock Name="UserFullNameTextBlock"  Grid.Row="1"
+                                   FontSize="14"
+                                   TextWrapping="WrapWithOverflow"
+                                   Width="70">Віктор Пірко</TextBlock>
+                        <TextBlock Name="UserLoginTextBlock" Grid.Row="2"
+                                   FontSize="9"
+                                   TextWrapping="WrapWithOverflow"
+                                   Width="70">vitya</TextBlock>
+                    </Grid>
+                </StackPanel>
+                <Button  Grid.Row="1"
+                         Width="64"
+                         Height="64"
+                         Name="Home"
+                         Background="gray"
+                         Click="ShowFrame">
+                    <Image  Source="C:/Users/djosa/Documents/SWArhictect/SWArchitecture/Content/house.png" />
+                </Button>
+                <Button  Grid.Row="2"
+                         Width="64"
+                         Height="64"
+                         Background="gray"
+                         Name="theory"
+                         Click="ShowFrame">
+                    <Image Source="C:/Users/djosa/Documents/SWArhictect/SWArchitecture/Content/studying.png" />
+                </Button>
+                <Button  Grid.Row="3"
+                         Width="64"
+                         Height="64"
+                         Background="gray"
+                         Name="Testing"
+                         Click="ShowFrame">
+                    <Image Source="C:/Users/djosa/Documents/SWArhictect/SWArchitecture/Content/writing.png" />
+                </Button>
+                <Button  Grid.Row="4"
+                         Width="64"
+                         Height="64"
+                         Background="gray"
+                         Name="stats"
+                         Click="ShowFrame">
+                    <Image Source="C:/Users/djosa/Documents/SWArhictect/SWArchitecture/Content/ereader-1.png" />
+                </Button>
+                <Button  Grid.Row="5"
+                         Width="64"
+                         Height="64"
+                         Background="gray"
+                         Name="login"
+                         Click="ShowFrame">
+                    <Image Source="C:/Users/djosa/Documents/SWArhictect/SWArchitecture/Content/printer.png" />
+                </Button>
+                <Label x:Name="label" Content="Початкова сторінка" HorizontalAlignment="Left" Margin="4,81,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                <Label x:Name="label_Copy" Content="теоретичні відомості" HorizontalAlignment="Left" Margin="3,84.6,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.RowSpan="2"/>
+                <Label x:Name="label1" Content="Завдання" HorizontalAlignment="Left" Margin="35,86.2,0,0" Grid.Row="3" Grid.RowSpan="2" VerticalAlignment="Top"/>
+                <Label x:Name="label2" Content="Статистика" HorizontalAlignment="Left" Margin="34,96.6,0,0" Grid.Row="4" Grid.RowSpan="2" VerticalAlignment="Top"/>
+                <Label x:Name="label3" Content="Перезайти" HorizontalAlignment="Left" Margin="31,72,0,0" Grid.Row="5" VerticalAlignment="Top"/>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <TextBlock VerticalAlignment="Center"
+                           FontSize="20"
+                           Name="Header"
+                           TextAlignment="Center">Header</TextBlock>
+                <Frame x:Name="Content" 
+                      Background="White"
+                      Grid.Row="1"
+                      Margin="10,10,10,10"></Frame>
+                <Grid HorizontalAlignment="Left" Height="100" Margin="67,326.4,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+            </Grid>
+        </Border>
     </Grid>
 </controls:MetroWindow>
 

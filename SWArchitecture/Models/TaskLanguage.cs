@@ -1,9 +1,8 @@
 using System.Collections.Generic;
 using System.Windows;
-using System;
+
 namespace SWArchitecture.Models
 {
-    [Serializable]
     public  class TaskLanguage
     {
         public int Id { get; set; }

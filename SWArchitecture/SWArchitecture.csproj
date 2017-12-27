@@ -93,9 +93,6 @@
     <Compile Include="UserControls\CreateTaskForm.xaml.cs">
       <DependentUpon>CreateTaskForm.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\main.xaml.cs">
-      <DependentUpon>main.xaml</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\Stats.xaml.cs">
       <DependentUpon>Stats.xaml</DependentUpon>
     </Compile>
@@ -103,11 +100,12 @@
     <Compile Include="UserControls\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\StatsWindow.xaml.cs">
-      <DependentUpon>StatsWindow.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="UserControls\StatsWindow.xaml.cs" />
     <Compile Include="UserControls\TaskForm.xaml.cs">
       <DependentUpon>TaskForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\theory.xaml.cs">
+      <DependentUpon>theory.xaml</DependentUpon>
     </Compile>
     <Page Include="UserControls\CreateTaskForm.xaml">
       <SubType>Designer</SubType>
@@ -130,19 +128,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\main.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="UserControls\Stats.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\StatsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\TaskForm.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UserControls\TaskForm.xaml">
+    <Page Include="UserControls\theory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -171,6 +169,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -186,7 +185,12 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Images\student.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lecturer.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

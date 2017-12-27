@@ -1,15 +1,18 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using System.Windows.Controls;
 using SWArchitecture.Models;
-using SWArchitecture.VLPI;
 
 namespace SWArchitecture.UserControls
 {
+    /// <summary>
+    /// Interaction logic for TaskForm.xaml
+    /// </summary>
     public class Singleton
     {
-        private static Singleton instance;
+        public static Singleton instance;
 
         private Singleton() { }
         public int cur = -1;
@@ -34,7 +37,6 @@ namespace SWArchitecture.UserControls
     public partial class TaskForm : UserControl
     {
         private Caretaker SaverLoader;
-        public SystemUser User { get; set; }
         public List<Task> Tasks { get; set; } //вообще всё что у нас в бд завалялось
         private List<Task> CurrentTasks { get; set; } //список тасков отсортированых по теме
 
@@ -71,11 +73,11 @@ namespace SWArchitecture.UserControls
             ShowNext();
         }
 
-        private async void buttonCheckTask_Click(object sender, System.Windows.RoutedEventArgs e)
+        private void buttonCheckTask_Click(object sender, RoutedEventArgs e)
         {
-            if (CurrentTasks.Count < Singleton.Instance.cur)
+            if (Singleton.Instance.cur<CurrentTasks.Count )
             {
-                var task = CurrentTasks[++Singleton.Instance.cur];
+                var task = CurrentTasks[Singleton.Instance.cur];
                 task.TaskCode = TextBoxTaskAnswer.Text;
                 var Res = new TaskChecker().CheckTask(task);
                 if (Res.Result)
@@ -83,17 +85,17 @@ namespace SWArchitecture.UserControls
                     Singleton.Instance.corans++;
                     this.CorrectAns.Content = Singleton.Instance.corans.ToString();
                 }
+                
                 using (var context = new ApplicationDbContext())
                 {
-                    var statistic = new Statistic()
+                    var statistic = new Statistic
                     {
                         Date = DateTime.Now,
                         Task = task,
                         Mark = Res.Result ? 1 : 0,
-                        User = User
+                        User = MainWindow.User
                     };
                     context.Statistics.Add(statistic);
-                    await context.SaveChangesAsync();
                 }
             }
         }
@@ -101,7 +103,11 @@ namespace SWArchitecture.UserControls
         private void ShowNext()
         {
             this.CurTask.Content = (Singleton.Instance.cur + 1).ToString();
-            if (CurrentTasks.Count > 0)
+            if (CurrentTasks.Count == Singleton.Instance.cur+1)
+            {
+                buttonStats_Click(null,null);
+            }
+            else if (CurrentTasks.Count > 0)
             {
                 var task = CurrentTasks[++Singleton.Instance.cur];
                 TextBlockDescription.Text = $"{task.Description}\n{task.RuleForTask}";
@@ -115,6 +121,8 @@ namespace SWArchitecture.UserControls
             buttonCheckTask_Click(sender, e);
             ShowNext();
         }
+
+        #region task types buttons
 
         private void buttonCodeStyleTask_Click(object sender, System.Windows.RoutedEventArgs e)
         {
@@ -137,6 +145,8 @@ namespace SWArchitecture.UserControls
             ShowNext();
         }
 
+        #endregion
+
         private void buttonStats_Copy_Click(object sender, System.Windows.RoutedEventArgs e)
         {
             Save();
@@ -144,9 +154,11 @@ namespace SWArchitecture.UserControls
 
         private void buttonStats_Click(object sender, System.Windows.RoutedEventArgs e)
         {
+
             var entities = new ApplicationDbContext();
+            var User = MainWindow.User;
             //var list=entities.SystemUsers.FirstOrDefault(x => x.Id == User.Id).Statistics;
-            var list = entities.Statistics.Where(x => x.User.Id == User.Id);
+            var list = entities.Statistics.Where(x => x.User.Id == User.Id );
             var windstats = new StatsWindow();
             windstats.Data.ItemsSource = list.ToList();
             windstats.Show();
